@@ -16,11 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
     @Bean
     public MemberService memberService() {
-       return getMemberService();
-    }
-    @Bean
-    public MemberServiceImpl getMemberService() {
-        return new MemberServiceImpl(memberRepository());
+       return new MemberServiceImpl(memberRepository());
     }
     @Bean
     public MemberRepository memberRepository() {
